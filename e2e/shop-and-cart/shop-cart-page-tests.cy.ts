@@ -12,9 +12,11 @@ before(() => {
   homePage.clickShopLink();
 });
 
-it("should add items to the cart and check item details - quantity, price, subtotal and total", () => {
-  shopPage.addItemsToCart(products);
-  cartPage.verifyCartItemCount(products);
-  cartPage.navigateToCart();
-  cartPage.verifyCart(products);
+describe("Shop and Cart Page Tests", () => {
+  it("should add items to the cart and check item details - quantity, price, subtotal and total", () => {
+    shopPage.addItemsToCart(products);
+    cartPage.verifyCartItemCount(products);
+    cartPage.navigateToCart();
+    cartPage.verifyCart(products);
+  });
 });
