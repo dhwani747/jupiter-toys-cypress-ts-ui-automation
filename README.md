@@ -30,7 +30,7 @@ Jupiter Toys UI Test: Following tests are automated in this framework
 4. Verify the unit price for each product
 5. Verify that total is sum of all the subtotal
 
-## Code Structure:-
+## Code Structure
 
 As Jupiter Toys is a Web application, I have used cypress with typescript tool for UI automation with page object model
 
@@ -64,11 +64,11 @@ The execution reports can be found under _/reports/_ directory
 
 2. Install cypress with node package manager
 
-   Initialize a package.json
+   **Initialize a package.json**
 
    npm init -y
 
-   Install Cypress locally
+   **Install Cypress locally**
 
    npm install cypress --save-dev
 
