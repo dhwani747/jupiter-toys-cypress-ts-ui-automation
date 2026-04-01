@@ -1,0 +1,24 @@
+{
+  "name": "jupiter-automation-tests",
+  "version": "1.0.0",
+  "description": "Automation tests for the Jupiter application",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc --project ./tsconfig.json --noEmit",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "open": "npx cypress open",
+    "run": "npx cypress run",
+    "contact:tests": "npm run build && cypress run --env envFile=prod --config specPattern=[e2e/contact/*.cy.ts] --reporter mochawesome --reporter-options reportDir=./reports,reportFilename=contact-tests-report,json=false,overwrite=false,html=true",
+    "shop:cart:tests": "npm run build && cypress run --env envFile=prod --config specPattern=[e2e/shop-and-cart/*.cy.ts] --reporter mochawesome --reporter-options reportDir=./reports,reportFilename=shop-cart-tests-report,json=false,overwrite=false,html=true",
+    "all:tests": "npm run build && cypress run --env envFile=prod --config specPattern=[e2e/**/*.cy.ts] --reporter mochawesome --reporter-options reportDir=./reports,reportFilename=all-tests-report,json=false,overwrite=false,html=true"
+  },
+  "dependencies": {
+    "cypress": "^15.13.0",
+    "cypress-mochawesome-reporter": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.0",
+    "mochawesome": "^7.1.4",
+    "typescript": "5.1"
+  }
+}

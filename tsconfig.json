@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es2020",               // modern JS
+    "module": "commonjs",             // Node/Cypress compatible
+    "lib": ["ES2020", "DOM"],         // include DOM for Cypress
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,             // to avoid @types/node errors
+    "types": ["cypress", "node"]
+  },
+  "include": ["cypress/**/*.ts", "support/**/*.ts", "**/*.ts"]
+}
