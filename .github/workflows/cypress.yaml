@@ -24,7 +24,7 @@ jobs:
         run: npm run build
 
       - name: Run Cypress tests
-        run: npm run all-tests
+        run: npm run all:tests
 
       - name: Upload Mochawesome Reports
         uses: actions/upload-artifact@v4
