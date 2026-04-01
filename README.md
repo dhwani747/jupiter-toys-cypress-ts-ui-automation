@@ -1,4 +1,4 @@
-# JupiterToys
+# Jupiter Toys Web application
 
 This repository contains the test automation for the Jupiter Toys web application, built with Cypress and TypeScript. Includes UI automation for Contacts page fields validations and assertions for flaky tests, Cart Page Items - item name, quantity, unit price, subtotal and total calculations, and CI/CD pipeline integration with best automation practices like Page Object Model
 
