@@ -1,6 +1,6 @@
 # JupiterToys
 
-This repository contains the test automation for the Jupiter Toys web application, built with Cypress and TypeScript. Includes UI automation for Contacts page fields validations and assertions for flaky tests, Cart Page Items - subtotal and total calculations, and CI/CD pipeline integration with best automation practices like Page Object Model
+This repository contains the test automation for the Jupiter Toys web application, built with Cypress and TypeScript. Includes UI automation for Contacts page fields validations and assertions for flaky tests, Cart Page Items - item name, quantity, unit price, subtotal and total calculations, and CI/CD pipeline integration with best automation practices like Page Object Model
 
 ## About Project
 
@@ -91,7 +91,7 @@ Clone the code from the following GitHub repository: <TBC>
 
 ## Instructions
 
-# Run locally
+**Run locally**
 
 Open a command-prompt and navigate to project directory where package.json file is located
 
@@ -108,7 +108,7 @@ npm run build && cypress run --env envFile=prod --config specPattern=[e2e/**/*.c
    -- runs only shop & cart tests
    npm run build && cypress run --env envFile=prod --config specPattern=[e2e/shop-and-cart/*.cy.ts] --reporter mochawesome --reporter-options reportDir=./reports,reportFilename=shop-cart-tests-report,json=false,overwrite=false,html=true
 
-   # Run with CI
+**Run with CI**
 
 1. Trigger on push or pull request to main
 1. Uses Node 20
