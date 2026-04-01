@@ -1,0 +1,29 @@
+name: Jupiter Cypress TypeScript Framework - E2E Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  cypress-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+
+      - run: npm ci
+      - run: npm run build
+      - run: npm run all-tests
+
+      - name: Upload Cypress Reports
+        uses: actions/upload-artifact@v3
+        with:
+          name: jupiter-e2e-reports
+          path: reports/
