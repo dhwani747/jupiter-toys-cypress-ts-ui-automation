@@ -1,4 +1,5 @@
-class CartPageSelectors {
+// This is the TypeScript way of exporting classes rather than having it at the end
+export default class CartPageSelectors {
   getCartLink() {
     return cy.get("#nav-cart");
   }
@@ -23,4 +24,3 @@ class CartPageSelectors {
     return cy.get('input[name="quantity"]');
   }
 }
-export default CartPageSelectors;
