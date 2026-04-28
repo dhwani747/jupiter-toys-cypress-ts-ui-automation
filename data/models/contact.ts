@@ -1,7 +1,8 @@
-export class Contact {
-  public forename: string = "John";
-  public surname: string = "Example";
-  public email: string = "john.example@planit.net.au";
-  public telephone: string = "02 1234 5678";
-  public message: string = "Tell us about it..";
+// I prefer using interfaces for data objects and having a separtate data provider class to set up and serve data to tests
+export interface Contact {
+  forename: string;
+  surname: string;
+  email: string;
+  telephone: string;
+  message: string;
 }
